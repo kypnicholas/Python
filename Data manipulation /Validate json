@@ -1,5 +1,5 @@
 # To execute this script run the following command: 
-# >> python validate_json.py your_json_file.json
+# >> python validate_json.py my_test_file.json
 
 
 import json
