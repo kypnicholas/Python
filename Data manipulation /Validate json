@@ -1,0 +1,21 @@
+# To execute this script run the following command: 
+# >> python validate_json.py your_json_file.json
+
+
+import json
+
+def validate_json(json_file):
+    try:
+        with open(json_file, 'r') as f:
+            data = json.load(f)
+        print("Valid JSON file")
+    except json.JSONDecodeError as e:
+        print("Invalid JSON file:", e)
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) != 2:
+        print("Usage: python validate_json.py <json_file>")
+        sys.exit(1)
+    json_file = sys.argv[1]
+    validate_json(json_file)
