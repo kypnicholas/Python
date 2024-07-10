@@ -1,27 +1,15 @@
-#!/usr/bin/env python
-#
-#   Copyright information
-#
-#	Copyright (C) 2010-2012 Dilshod Temirkhodjaev <tdilshod@gmail.com>
-#
-#   License
-#
-#	This program is free software; you can redistribute it and/or modify
-#	it under the terms of the GNU General Public License as published by
-#	the Free Software Foundation; either version 2 of the License, or
-#	(at your option) any later version.
-#
-#	This program is distributed in the hope that it will be useful,
-#	but WITHOUT ANY WARRANTY; without even the implied warranty of
-#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-#	GNU General Public License for more details.
-#
-#	You should have received a copy of the GNU General Public License
-#	along with this program. If not, see <http://www.gnu.org/licenses/>.
+# Useful script to convert .xsl to .csv. You can also pass the delimiter as param. 
+# Steps to run: 
+# 1. Install python on your machine
+# 2. pass arguments to the script thought CMD,
+# 
+# if python is not in your Env variables use: 
+# C:\python27>  python arg1(python script name) arg2(input xsl) arg3(output csv) 
 
-__author__ = "Dilshod Temirkhodjaev <tdilshod@gmail.com>"
-__license__ = "GPL-2+"
-__version__ = "0.7.3"
+# C:\python27>  
+# python C:\Users\konradm\Downloads\xslx2csv.py 
+# C:\Users\konradm\Downloads\Proposition Catalogue\25-03-19\Dev_Mobile_Matrix_B2B_250319.xlsx
+# importB2B25Mar19.csv
 
 import csv, datetime, zipfile, string, sys, os, re, signal
 import xml.parsers.expat
