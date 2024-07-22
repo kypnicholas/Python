@@ -1,0 +1,59 @@
+## *args allows for an arbitrary number of arguments, and the function takes them in as a tuple of values. 
+
+# before
+
+def myfunc(a=0,b=0,c=0,d=0,e=0):
+    return sum((a,b,c,d,e))*.05
+
+myfunc(40,60,20)
+
+# after
+
+def myfunc(*args):
+    return sum(args)*.05
+
+myfunc(40,60,20)
+
+# "args" is itself arbitrary - any word will do so long as it's preceded by an asterisk.
+
+def myfunc(*spam):
+    return sum(spam)*.05
+
+myfunc(40,60,20)
+
+
+## **kwargs - a way to handle arbitrary numbers of keyworded arguments. Instead of creating a tuple of values, **kwargs builds a dictionary of key/value pairs. 
+
+def myfunc(**kwargs):
+    if 'fruit' in kwargs:
+        print("My favorite fruit is {}".format(kwargs['fruit']))
+    else:
+        print("I don't like fruit")
+        
+myfunc(fruit='pineapple')
+
+
+# Exercise - return evens
+
+def myfunc(*args):
+    out=[]
+    for num in args:
+        if num%2==0:
+            out.append(num)
+    return out
+
+myfunc(1,2,3,4,5)
+
+
+# Exercise - takes in a string, and returns a matching string where every even letter is uppercase, and every odd letter is lowercase. 
+
+def myfunc(x):
+    out=[]
+    for i in range(len(x)):
+        if i%2==0:
+            out.append(x[i].lower())
+        else:
+            out.append(x[i].upper())
+    return ''.join(out)
+
+myfunc("test")
