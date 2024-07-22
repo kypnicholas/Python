@@ -1,0 +1,74 @@
+# print 
+msg = "Hello, world!"
+print(msg.upper())
+
+test = set('Mississippi') 
+print(test)
+
+
+# break: breaks out of the current closest enclosing loop. // END LOOP. 
+# continue: Goes to the top of the closest enclosing loop. // SKIP.
+# pass: Does nothing at all.
+x = 0
+while x < 5:
+    print('x is currently: ',x)
+    print(' x is still less than 10, adding 1 to x')
+    x+=1
+    if x==3:
+        print('Breaking because x==3')
+        break
+    else:
+        print('continuing...')
+        continue
+
+
+
+# range(start,stop,step size) - allows you to quickly generate a list of integers
+# range() is a generator function. special type of function that will generate information and not need to save it to memory. 
+print(list(range(0,11)))
+
+
+
+## enumerate(object to iterate on, start) - adds a counter to an iterable and returns it as an enumerate object (iterator with index and the value). 
+
+index_count = 0
+
+for letter in 'abcde':
+    print("At index {} the letter is {}".format(index_count,letter))
+    index_count += 1
+
+
+for i,letter in enumerate('abcde'):
+    print("At index {} the letter is {}".format(i,letter))
+
+
+# zip(list1,list2) - 
+
+mylist1 = [1,2,3]
+mylist2 = ['a','b','c','d','e']
+
+print(list(zip(mylist1,mylist2)))
+
+
+## list comprehensions - allow us to build out lists using a different notation. 
+
+# before: 
+mystring = 'hello'
+
+mylist=[]
+for letter in mystring:
+    mylist.append(letter)
+
+print(mylist)
+
+# after: 
+mylist = [letter for letter in mystring]
+print(mylist)
+
+# get the square numbers of every number in range and turn into list using list comprehension
+mylist = [num**2 for num in range(0,11)]
+print(mylist)
+
+# get the even numbers using list comprehension
+mylist = [num for num in range(0,11) if num % 2 == 0]
+print(mylist)
