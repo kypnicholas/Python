@@ -1,3 +1,86 @@
+## getting help for python methods
+help(mylist.insert)
+
+
+## Print TRUE if there is any even number in a given list
+def check_even_in_list(num_list):
+    for number in num_list:
+        if number % 2 == 0:
+            return True
+        else:
+            pass
+    return False
+
+check_even_in_list([1,5,3])
+
+
+## Print ALL even numbers in a given list
+def check_even_in_list(num_list):
+
+    # placeholder variable
+    even_numbers=[]
+
+    for number in num_list:
+        if number % 2 == 0:
+            even_numbers.append(number)
+        else:
+            pass
+    return even_numbers
+
+check_even_in_list([1,2,3])
+
+
+## Shuffle a list
+from random import shuffle
+
+examplelist = [1,2,3,4,5,6,7]
+
+def shuffle_list(mylist):
+    shuffle(mylist)
+    return mylist
+
+result = shuffle_list(examplelist)
+result
+
+
+## game where the player guess where is the 'ball'
+from random import shuffle
+
+mylist = [' ','O',' ']
+
+def shuffle_list(mylist):
+    shuffle(mylist)
+    return mylist
+
+result = shuffle_list(mylist)
+print(result)
+
+def player_guess():
+    guess=''
+    while guess not in ['0','1','2']:
+        guess = input ("Pick a number between: 0,1,2 ")
+    return int(guess)
+
+player_guess()
+
+def check_guess(mylist,guess):
+    if mylist[guess]=='0':
+        print("Correct!")
+    else:
+        print("Wrong!")
+        print(mylist)
+
+# Shuffle list
+mixedup_list = shuffle_list(mylist)
+
+# User guess 
+guess = player_guess()
+
+# Check guess
+check_guess(mixedup_list,guess)
+
+
+
 ## *args allows for an arbitrary number of arguments, and the function takes them in as a tuple of values. 
 
 # before
