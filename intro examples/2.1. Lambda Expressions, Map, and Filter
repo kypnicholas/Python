@@ -1,5 +1,5 @@
 
-# MAP FUNCTION - allows you to "map" a function to an iterable object. That is to say you can quickly call the same function to every item in an iterable, such as a list. 
+## MAP FUNCTION - allows you to "map" a function to an iterable object. That is to say you can quickly call the same function to every item in an iterable, such as a list. 
 
 def square(num):
     return num**2
@@ -14,3 +14,13 @@ list(map(square,my_nums))
 # or iterate through map() 
 for n in map(square,my_nums):
     print(n)
+
+
+## FILTER FUNCTION - selects elements from an iterable based on the result of a function. 
+
+def check_even(num):
+    return num % 2 == 0 
+
+nums = [0,1,2,3,4,5,6,7,8,9,10]
+
+list(filter(check_even,nums))
