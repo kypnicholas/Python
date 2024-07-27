@@ -24,3 +24,44 @@ def check_even(num):
 nums = [0,1,2,3,4,5,6,7,8,9,10]
 
 list(filter(check_even,nums))
+
+
+
+
+## LAMBDA EXPRESSIONS - allow us to create ad-hoc functions without needing to properly define a function using def.
+# Unlike a function, lambda's body is a single expression, not a block of statements !! 
+
+# Before 
+def square(num):
+    result = num**2
+    return result
+
+square(2)
+
+# After  
+
+lambda num: num ** 2   # # this will return the result in a location in memory.  
+
+# for testing purposes assign it to a variable: 
+square = lambda num: num **2
+
+square(2)
+
+
+
+# Recreate the earlier examples using lambda: 
+
+my_nums = [1,2,3,4,5]
+
+list(map(lambda num: num ** 2, my_nums))
+
+list(filter(lambda n: n % 2 == 0,nums))
+
+
+# Lambda expression for reversing a string:
+
+reverse_string = lambda s: s[::-1]
+
+reverse_string('Hello')
+
+
