@@ -250,3 +250,49 @@ def spy_game(nums):
 
 # Check
 spy_game([1,2,4,0,0,7,5])
+
+
+
+
+## Exercise - Write a function that computes the volume of a sphere given its radius.
+
+import math
+
+def vol_sphere(rad):
+    print( (4/3)* math.pi* (rad**3))
+
+vol_sphere(2)
+
+
+
+## Exercise - Write a function that checks whether a number is in a given range (inclusive of high and low)
+
+def ran_check(num,low,high):
+    print(num in range(low,high+1))
+
+
+ran_check(8,2,7)
+
+
+
+## Exercise - Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+
+def up_low(s):
+    lowercase = 0 
+    uppercase = 0
+
+    for char in s: 
+        if char.isupper():
+            uppercase+=1
+        elif char.islower():
+            lowercase+=1
+        else:                   # for special chars which are neither upper or lower case. 
+            pass
+    
+    print("Original String : " + s)
+    print("No. of Upper case characters :"  + str(uppercase))
+    print("No. of Lower case Characters : " + str(lowercase))
+
+
+s = 'Hello Mr. Rogers, how are you this fine Tuesday?'
+up_low(s)
