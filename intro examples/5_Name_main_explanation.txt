@@ -1,0 +1,12 @@
+
+The if __name__ == "__main__": construct in Python is used to determine whether the current script is being run as the main program or if it is being imported as a module into another script. This is important for writing code that can be both run as a standalone program and imported as a module into other programs.
+
+Imagine you have a Python file called my_program.py. Now, sometimes you might want to use the functions and variables in my_program.py from another Python file. And sometimes you just want to run my_program.py by itself.
+
+When you run my_program.py directly by typing python my_program.py in your terminal, Python sets a special variable called __name__ to "__main__". It's like Python is saying, "Hey, I'm running this file as the main thing!"
+
+Now, let's say you have a function in my_program.py called do_stuff(). When you run my_program.py directly, you might want to automatically run do_stuff() too. But if you import my_program.py into another file, you probably don't want do_stuff() to run automatically.
+
+That's where if __name__ == "__main__": comes in. It's like a signal to Python saying, "If I'm the main program being run, then do this stuff inside."
+
+It may seem a little much right now, but this is building some habits for when you are building Python apps that use multiple files! The important thing is to put all of your logic inside a if __name__ == "__main__": block.
